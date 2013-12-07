@@ -3,7 +3,9 @@
 
 // Declare app level module which depends on filters, and services
 angular.module('zspaces', [
-	'ngRoute', 'zspaces.controllers', 'zspaces.services' 
+	'ngRoute', 'firebase', 
+	'zspaces.config', 'zspaces.controllers', 'zspaces.services',
+	'zspaces.directives', 'zspaces.filters' 
 ])
 
 .config(function ($routeProvider) {
@@ -13,17 +15,18 @@ angular.module('zspaces', [
 })
 
 // establish authentication
-/*
-.run(['$rootScope', 'instance', 'Firebase', 'FBURL', 'fbAuthoriser', 
-function ($rootScope, instance, Firebase, FBURL, fbAuthoriser) {
-	$rootScope.instance = instance();
 
-	// log the user in if credentials exists
-	fbAuthoriser.initialise(new Firebase(FBURL), {});
-}])
-*/
+.run(function ($rootScope, Firebase, FBURL, angularFireAuth) {
+	angularFireAuth.initialize(new Firebase(FBURL), {scope: $rootScope, name: "auth", path: '/login'});
+	
+})
+
 ;
 
 angular.module('zspaces.controllers', []);
 
 angular.module('zspaces.services', []);
+
+angular.module('zspaces.directives', []);
+
+angular.module('zspaces.filters', []);

@@ -1,0 +1,33 @@
+<h1>List my place</h1>
+<form name="form" class="pure-form pure-form-aligned">
+
+	<div class="pure-control-group">
+		<label>Address</label> 
+		<input type="text" name="address" placeholder="483 George Street, Sydney, New South Wales, Australia" z-complete-place ng-model="ad.address"></label>
+	</div>
+	
+	<div class="pure-control-group">
+		<label>Title</label> 
+		<input type="text" name="title" placeholder="Commercial place, restaurant, shop, etc." ng-model="ad.title">
+	</div>
+	
+	<div class="pure-control-group">
+		<label>Available from</label> 
+		<input type="text" name="from" ng-model="ad.from"></label>
+	</div>
+	
+	<div class="pure-control-group">
+		<label>Available to</label>
+		<input type="text" name="to" ng-model="ad.to"></label>
+	</div>
+	
+	<div class="pure-control-group">
+		<label>Description</label>
+		<textarea type="text" name="description" ng-model="ad.description"></textarea></label>
+	</div>
+	
+	<div class="pure-controls">
+		<button type="button" class="pure-button pure-button-primary" ng-click="create()">Create</button>
+	</div>
+
+</form>
