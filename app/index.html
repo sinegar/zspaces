@@ -15,18 +15,20 @@
 	<meta property="og:url" content="http://zspaces.org">
 
 	<!-- build:css css/app.css -->
-	<link rel="stylesheet" href="css/app.css"/>
 	<link rel="stylesheet" href="../vendor/pure/pure.css"/>
+	<link rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.css"/>
+
+	<link rel="stylesheet" href="css/app.css"/>
 	<!-- endbuild -->
 	
 </head>
 <body>
 	<div class="page">
 		<nav class="pure-g pure-menu pure-menu-open pure-menu-horizontal">
-			<div class="pure-u-1-2">
-				<a href="/" class="pure-menu-heading">zspaces</a>
+			<div class="pure-u-1-8">
+				<a href="#/" class="pure-menu-heading">zspaces</a>
 			</div>
-			<ul class="pure-u-1-2 right">
+			<ul class="pure-u-7-8 right">
 				<li><a href="/signup">Sign-Up</a></li>
 				<li><a href="/login">Login</a></li>
 			</ul>
@@ -34,7 +36,10 @@
 		
 		<main ng-view></main>
 
-		<footer></footer>
+		<footer class="pure-g">
+			<div class="pure-u-1-2"><a href="">about</a> | <a href="">terms</a> | <a href="">privacy</a></div>
+			<div class="pure-u-1-2 right">Background image by <a href="http://www.flickr.com/photos/15481483@N06/6392781395/in/photolist-aJUFbT">^ Missi ^</a></div>
+		</footer>
 	</div>
 
 	<script src="//cdn.firebase.com/v0/firebase.js"></script>

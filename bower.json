@@ -6,7 +6,8 @@
     "angular": "~1.2.4",
     "angular-route": "~1.2.4",
     "angular-fire": "~0.3.1",
-    "pure": "~0.3.0"
+    "pure": "~0.3.0",
+    "font-awesome": "~4.0.3"
   },
   "devDependencies": {}
 }

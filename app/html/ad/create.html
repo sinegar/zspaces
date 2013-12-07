@@ -1,33 +1,29 @@
 <h1>List my place</h1>
-<form name="form" class="pure-form pure-form-aligned">
+<form name="form" class="pure-form pure-form-aligned" novalidate>
 
 	<div class="pure-control-group">
-		<label>Address</label> 
-		<input type="text" name="address" placeholder="483 George Street, Sydney, New South Wales, Australia" z-complete-place ng-model="ad.address"></label>
+		<label for="address">Address</label> 
+		<input type="text" id="address" name="address" placeholder="483 George Street, Sydney, New South Wales, Australia" required z-complete-place ng-model="ad.address">
 	</div>
 	
 	<div class="pure-control-group">
-		<label>Title</label> 
-		<input type="text" name="title" placeholder="Commercial place, restaurant, shop, etc." ng-model="ad.title">
+		<label for="title">Title</label> 
+		<input type="text" id="title" name="title" placeholder="Commercial place, restaurant, shop, etc." required ng-model="ad.title">
 	</div>
 	
 	<div class="pure-control-group">
-		<label>Available from</label> 
-		<input type="text" name="from" ng-model="ad.from"></label>
+		<label for="from">Available from</label>
+		 
+		<input type="date" id="from" name="from" required ng-model="ad.from"> to <input type="date" id="to" name="to" required ng-model="ad.to">
 	</div>
 	
 	<div class="pure-control-group">
-		<label>Available to</label>
-		<input type="text" name="to" ng-model="ad.to"></label>
-	</div>
-	
-	<div class="pure-control-group">
-		<label>Description</label>
-		<textarea type="text" name="description" ng-model="ad.description"></textarea></label>
+		<label for="description">Description</label>
+		<textarea type="text" id="description" name="description" required ng-model="ad.description"></textarea>
 	</div>
 	
 	<div class="pure-controls">
-		<button type="button" class="pure-button pure-button-primary" ng-click="create()">Create</button>
+		<button type="button" class="pure-button pure-button-primary" ng-click="create()" ng-disable="busy">Create</button>
 	</div>
 
 </form>

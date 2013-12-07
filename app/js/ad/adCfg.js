@@ -2,13 +2,18 @@
 
 angular.module('zspaces').config(function ($routeProvider) {
 
-	$routeProvider.when('/ad/create', {
+	$routeProvider.when('/create', {
 		controller: 'adCreateCtrl', 
 		templateUrl: 'html/ad/create.html'
 	});
 
-	$routeProvider.when('/ad/list', {
+	$routeProvider.when('/', {
 		controller: 'adListCtrl', 
 		templateUrl: 'html/ad/list.html'
+	});
+
+	$routeProvider.when('/ad/:ad', {
+		controller: 'adCtrl', 
+		templateUrl: 'html/ad/show.html' 
 	});
 });

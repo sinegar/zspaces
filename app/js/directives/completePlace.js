@@ -7,16 +7,15 @@ angular.module('zspaces.directives')
     return {
         require: 'ngModel',
         link: function(scope, element, attrs, model) {
-                	console.log('....');
             var options = {
-                types: [],
+                types: ['geocode'],
                 componentRestrictions: {}
             };
             scope.gPlace = new google.maps.places.Autocomplete(element[0], options);
  
             google.maps.event.addListener(scope.gPlace, 'place_changed', function() {
                 scope.$apply(function() {
-                    model.$setViewValue(element.val());                
+                    model.$setViewValue(element.val());
                 });
             });
         }

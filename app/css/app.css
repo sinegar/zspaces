@@ -1,12 +1,88 @@
+body {
+	background: url('http://farm8.staticflickr.com/7175/6392781395_453160f3b7_o.jpg');
+}
+
 .page {
+	padding: 0 3em;
+}
+
+nav.pure-menu.pure-menu-open {
+	background: transparent;
+}
+
+main, nav.pure-menu.pure-menu-open li a {
+	background: rgb(255,255,255) transparent;
+ 	background: rgba(255,255,255,0.8);
+}
+
+main {
 	max-width: 980px;
-	margin: 0 auto;
+	min-height: 800px; 
+	
+	margin: 3em auto;
+
+	padding: 2em;
+	border-radius: 1em;
 }
 
 .right {
 	text-align: right;
 }
 
-form {
+.listing {
+	padding: 0;
+	margin: 0;
+}
+
+.listing li {
+	margin: 10px 1em;
+	padding: 10px 1em;
+	list-style-type: none;
+	line-height: 2em;
+	height: 4em;
+	background: rgba(255,255,255,0.9);
+}
+
+.listing li a {
+	display: block;
 	font-size: larger;
+}
+
+form {
+	font-size: 1.8em;
+}
+
+form input, form textarea {
+	width: 22em;
+}
+
+form input[type="date"] {
+	width: 10em;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+footer {
+	margin: 1em;
+}
+
+h1, h2 {
+	margin: 0 0 1em 0;
+	padding: 0;
+}
+
+.ads h2 {
+	margin: 0 1em;
+}
+
+.big {
+	font-size: 1.5em;
+}
+
+.actions {
+	float: right;
+	
 }

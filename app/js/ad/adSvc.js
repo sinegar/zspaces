@@ -2,21 +2,51 @@
 
 angular.module('zspaces.services')
 
-.factory('adSvc', function (Firebase, FBURL) {
+.factory('adSvc', function ($q, Firebase, FBURL) {
 	
-	var fb = new Firebase(FBURL).child('ads'); 
+	var root = new Firebase(FBURL),
+		ads = root.child('ads'), 
+		takens = root.child('taken'); 
 	
 	function create(ad) {
-		fb.push(ad); 
+		var deferred = $q.defer();
+			id = ads.push(ad, function() {
+				deferred.resolve(id);
+			}).name();
+		
+		return deferred.promise;
+		 
 	}
 
-	function firebase(child) {
-		return child ? fb.child(child) : fb; 
+	function getAds(child) {
+		return child ? ads.child(child) : ads; 
+	}
+
+	function getTakens(child) {
+		return child ? takens.child(child) : takens; 
+	}
+
+	function take(id) {
+		var deferred = $q.defer();
+
+		ads.child(id).once('value', function(snapshot) {
+			takens.child(id).set(snapshot.val(), function(error) {
+				if (!error) {
+					ads.child(id).remove(function(){
+						deferred.resolve();
+					});
+				}
+			}); 
+		}); 
+
+		return deferred.promise; 
 	}
 	
 	return {
 		create : create,
-		firebase: firebase
+		take : take,
+		ads: getAds,
+		takens: getTakens
 	};
 	
 })
