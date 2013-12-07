@@ -1,0 +1,7 @@
+!.gitkeep
+.DS_Store
+.tmp
+work
+vendor
+node_modules
+dist

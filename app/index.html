@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" ng-app="zspaces">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	
+	<title> zspaces </title>
+
+	<meta name="author" content="zspaces">
+	
+	<meta property="og:title" content="zspaces">
+	<meta property="og:description" content="zspaces description">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="zspaces.org">
+	<meta property="og:url" content="http://zspaces.org">
+
+	<!-- build:css css/app.css -->
+	<link rel="stylesheet" href="css/app.css"/>
+	<link rel="stylesheet" href="../vendor/pure/pure.css"/>
+	<!-- endbuild -->
+	
+</head>
+<body>
+	<div class="page">
+		<nav class="pure-g pure-menu pure-menu-open pure-menu-horizontal">
+			<div class="pure-u-1-2">
+				<a href="/" class="pure-menu-heading">zspaces</a>
+			</div>
+			<ul class="pure-u-1-2 right">
+				<li><a href="/signup">Sign-Up</a></li>
+				<li><a href="/login">Login</a></li>
+			</ul>
+		</nav>
+		
+		<main ng-view></main>
+
+		<footer></footer>
+	</div>
+
+	<script src="//cdn.firebase.com/v0/firebase.js"></script>
+	<script src="//cdn.firebase.com/v0/firebase-simple-login.js"></script>
+	
+	<!-- build:js js/app.js -->
+	<script src="../vendor/lodash/dist/lodash.compat.js"></script>
+
+	<script src="../vendor/angular/angular.js"></script>
+	<script src="../vendor/angular-route/angular-route.js"></script>
+
+	<script src="../vendor/angular-fire/angularFire.js"></script>
+	
+	<script src="js/app.js"></script>
+	<script src="js/config.js"></script>
+
+	<script src="js/list/listCfg.js"></script>
+	
+	<script src="js/login/loginCtrl.js"></script>
+	<script src="js/list/listCtrl.js"></script>
+		
+	<!-- endbuild -->
+</body>
+</html>
