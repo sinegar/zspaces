@@ -29,8 +29,9 @@
 				<a href="#/" class="pure-menu-heading">zspaces</a>
 			</div>
 			<ul class="pure-u-7-8 right">
-				<li><a href="/signup">Sign-Up</a></li>
-				<li><a href="/login">Login</a></li>
+				<li ng-hide="auth"><a href="#/signup">Sign-Up</a></li>
+				<li ng-hide="auth"><a href="#/login">Login</a></li>
+				<li ng-show="auth" ng-controller="logoutCtrl"><a href ng-click="logout()" ng-bind="auth.first_name"></a></li>
 			</ul>
 		</nav>
 		
@@ -59,14 +60,13 @@
 	<script src="js/app.js"></script>
 	<script src="js/config.js"></script>
 
+	<script src="js/login/loginCfg.js"></script>
 	<script src="js/ad/adCfg.js"></script>
-	<script src="js/list/listCfg.js"></script>
 
 	<script src="js/ad/adSvc.js"></script>
 	
 	<script src="js/login/loginCtrl.js"></script>
 	<script src="js/ad/adCtrl.js"></script>
-	<script src="js/list/listCtrl.js"></script>
 
 	<script src="js/directives/completePlace.js"></script>
 	<script src="js/filters/reverse.js"></script>
