@@ -10,6 +10,9 @@ nav.pure-menu.pure-menu-open {
 	background: transparent;
 }
 
+nav.pure-menu.pure-menu-open li a {
+	margin:10px;
+}
 main, nav.pure-menu.pure-menu-open li a {
 	background: rgb(255,255,255) transparent;
  	background: rgba(255,255,255,0.8);
@@ -89,4 +92,15 @@ h1, h2 {
 
 .hidden {
 	display: none;
+}
+
+img.heading {
+	width: 100%;
+}
+
+img.icon {
+	width: 3em;
+	height: 3em;
+	float: left;
+	margin: 10px 10px 10px 0;
 }

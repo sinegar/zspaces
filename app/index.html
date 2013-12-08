@@ -26,10 +26,10 @@
 	<div class="page">
 		<nav class="pure-g pure-menu pure-menu-open pure-menu-horizontal">
 			<div class="pure-u-1-8">
-				<a href="#/" class="pure-menu-heading">zspaces</a>
+				<a href="#/" class="pure-menu-heading"><img src="img/logo.png" height="32px"></a>
 			</div>
 			<ul class="pure-u-7-8 right">
-				<li ng-hide="auth"><a href="#/signup">Sign-Up</a></li>
+				<li ng-hide="auth"><a href="#/login">Sign-Up</a></li>
 				<li ng-hide="auth"><a href="#/login">Login</a></li>
 				<li ng-show="auth" ng-controller="logoutCtrl"><a href ng-click="logout()" ng-bind="auth.first_name"></a></li>
 			</ul>
@@ -47,6 +47,8 @@
 	<script src="//cdn.firebase.com/v0/firebase-simple-login.js"></script>
 	<script src="//maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
 
+
+	<script src="js/geoFire.js"></script>
 	
 	<!-- build:js js/app.js -->
 	

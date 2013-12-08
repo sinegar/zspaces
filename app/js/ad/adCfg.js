@@ -16,4 +16,9 @@ angular.module('zspaces').config(function ($routeProvider) {
 		controller: 'adCtrl', 
 		templateUrl: 'html/ad/show.html' 
 	});
+
+	$routeProvider.when('/taken/:ad', {
+		controller: 'takenCtrl', 
+		templateUrl: 'html/ad/show.html' 
+	});
 });

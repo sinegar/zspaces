@@ -3,7 +3,7 @@
 <div class="pure-u-1-2">
 <h2>Available spaces</h2>
 <ul class="listing">
-	<li><a href="#/create" class="pure-button pure-button-primary">List your space</a></li>
+	<li><a href="#/create" ><img src="img/post-button.png" height="32px"></a></li>
 	<li ng-repeat="ad in ads | reverse" ng-include="'html/ad/item.html'"></li>
 </ul>
 </div>
@@ -11,7 +11,7 @@
 <div class="pure-u-1-2">
 <h2>Spaces just rented</h2>
 <ul class="listing">
-	<li ng-repeat="ad in takens | reverse" ng-include="'html/ad/item.html'"></li>
+	<li ng-repeat="ad in takens | reverse" ng-include="'html/ad/taken.html'"></li>
 </ul>
 </div>
 

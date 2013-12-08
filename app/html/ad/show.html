@@ -1,5 +1,16 @@
-<h1><span ng-bind="ad.title"></span> <div class="actions"><a href class="pure-button pure-button-primary" ng-disable="busy" ng-click="takeIt()">Take it</a></div></h1>
+<img class="heading" ng-src="{{ad.photo}}" ng-show="ad.photo">
+<h1><span ng-bind="ad.title"></span> <div class="actions"><a href class="pure-button pure-button-primary" ng-disabled="busy" ng-click="takeIt()">Rent it</a></div>
+<br><span ng-bind="ad.from"></span> &ndash; <span ng-bind="ad.to"></span>  </h1>
 <i class="fa fa-map-marker"></i> <span ng-bind="ad.address"></span>
 
-<p class="big" ng-bind="ad.description">
+<div class="pure-g-r">
+
+<div class="pure-u-2-3"><p class="big" ng-bind="ad.description"></div>
+
+<div class="pure-u-1-3"></div>
+
+</div>
+
+
+<p ng-bind="ad.photo_attr">
 

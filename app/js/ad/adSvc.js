@@ -6,11 +6,13 @@ angular.module('zspaces.services')
 	
 	var root = new Firebase(FBURL),
 		ads = root.child('ads'), 
+		geoAds = new geoFire(ads), 
 		takens = root.child('taken'); 
 	
 	function create(ad) {
 		var deferred = $q.defer();
 			id = ads.push(ad, function() {
+				geoAds.updateLocForId([ad.location.lng, ad.location.lng], id);
 				deferred.resolve(id);
 			}).name();
 		
