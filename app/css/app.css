@@ -1,5 +1,5 @@
 body {
-	background: url('http://farm8.staticflickr.com/7175/6392781395_453160f3b7_o.jpg');
+	background: url('http://farm9.staticflickr.com/8149/7295418718_63bf574aef_o.jpg');
 }
 
 .page {
@@ -44,11 +44,13 @@ main {
 	line-height: 2em;
 	height: 4em;
 	background: rgba(255,255,255,0.9);
+	white-space:nowrap;
 }
 
 .listing li a {
 	display: block;
 	font-size: larger;
+	overflow: hidden;
 }
 
 form {
@@ -103,4 +105,11 @@ img.icon {
 	height: 3em;
 	float: left;
 	margin: 10px 10px 10px 0;
+}
+
+
+img.post {
+	height: 3em;
+	margin: 0 auto;
+	display: block;
 }
